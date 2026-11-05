@@ -245,3 +245,33 @@ void task9()
 
     cout << "The average of the marks is: " << average << endl;
 }
+// Task 10 - Variable Scope
+
+// Shows how global, static and local variables behave.
+
+// Personalisation: All three variables start from 6152.
+
+void showVariables()
+{
+    static int staticCount = 6152;
+    int localCount = 6152;
+
+    globalCount++;
+    staticCount++;
+    localCount++;
+
+    cout << "Global: " << globalCount << endl;
+    cout << "Static: " << staticCount << endl;
+    cout << "Local: " << localCount << endl;
+
+    cout << endl;
+}
+
+void task10()
+{
+    // Calls the function three times.
+    for (int i = 0; i < 3; i++)
+    {
+        showVariables();
+    }
+}
