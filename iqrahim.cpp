@@ -32,7 +32,7 @@ int main()
     task4();
     task5();
     task6();
-    task7("Rahim", 52);
+    task7("Student 6152", 52);
 
     cout << "\nTask 8: Static Local Variables" << endl;
     task8();
@@ -167,7 +167,7 @@ void task6()
 
 // Receives a name and marks, then displays both.
 
-// Personalisation: Uses Rahim's name and the last two digits of 6152 (52).
+// // Personalisation: Uses the student label and the last two digits of 6152 (52).
 
 void task7(string name, int marks)
 {
