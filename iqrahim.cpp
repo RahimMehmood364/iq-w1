@@ -150,4 +150,17 @@ void task5()
             cout << "Invalid month" << endl;
     }
 }
+// Task 6 - Working with Arrays
+
+// Stores five values and displays the third one.
+
+// Personalisation: The third array value is the last digit of 6152 (2).
+
+void task6()
+{
+    int numbers[5] = {10, 20, 2, 40, 50};
+
+    // Index 2 refers to the third element.
+    cout << "Third value = " << numbers[2] << endl;
+}
 
