@@ -1,6 +1,21 @@
 // 6152filebackup.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 // personalisation number: 6152
+/*
+ W1 ERRORS AND FIXES
+
+ E1 Task 2 - Used + instead of *.
+    Fix: Changed + to * to get the correct answer (28).
+
+ E2 Task 4 - Used the wrong condition to check even or odd.
+    Fix: Changed != to == so 6152 is shown as even.
+
+ E3 Task 7 - The student name was incorrect.
+    Fix: Changed the name to "Student 6152".
+
+ E4 Task 8 - The counter started from 0 every time.
+    Fix: Added static so the counter remembers its previous value.
+*/
 
 #include <iostream>
 #include <string>
