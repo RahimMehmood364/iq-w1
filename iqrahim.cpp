@@ -180,15 +180,14 @@ void task7(string name, int marks)
 
 // Personalisation: Displays 6152 on each call.
 
-// Error 4: The counter is not declared as static.
+// Fix: Added static so the counter keeps its value.
 
 void task8()
 {
-    int count = 0;
+    static int count = 0;
 
     count++;
 
     cout << "My personalisation number is 6152" << endl;
     cout << "Total function calls: " << count << endl;
 }
-
