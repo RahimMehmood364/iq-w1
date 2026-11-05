@@ -83,3 +83,19 @@ void task2()
     cout << "Second number: " << b << endl;
     cout << "Result: " << a * b << endl;
 }
+// Task 3 - Multiplication Table
+
+// Uses a loop to display the table of a number.
+
+// Personalisation: N is worked out using 6152 % 10 + 1.
+// The calculated value of N is 3.
+
+void task3()
+{
+    int N = (6152 % 10) + 1;
+
+    for (int i = 1; i <= N; i++)
+    {
+        cout << N << " x " << i << " = " << N * i << endl;
+    }
+}
