@@ -1,4 +1,4 @@
-// 6152filebackup.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// 6152_C1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 // personalisation number: 6152
 /*
@@ -70,7 +70,7 @@ int main()
 // Personalisation: Takes the second digit (1) and final digit (2)
 // from the number 6152.
 
-// Error 1: The program uses fixed values instead of asking the user.
+// The two values come from the personalisation number, so no user input is needed.
 
 void task1()
 {
@@ -182,7 +182,7 @@ void task6()
 
 // Receives a name and marks, then displays both.
 
-// // Personalisation: Uses the student label and the last two digits of 6152 (52).
+// Personalisation: Uses the student label and the last two digits of 6152 (52).
 
 void task7(string name, int marks)
 {
@@ -212,11 +212,11 @@ void task8()
 
 // Negative marks are ignored, and invalid text is handled.
 
-// Fix 1: Only valid marks are added to the total.
-// Fix 2: Only valid marks are counted.
-// Fix 3: Returns 0.0 when no valid marks are entered.
-// Fix 4: Uses double division for an accurate average.
-// Fix 5: Handles letters or other invalid input.
+// Testing:
+// - No valid marks (-1 only):           average is 0
+// - All valid marks (50 60 70 -1):      average is 60
+// - Mixed (50 0 -5 60 -1):              -5 ignored, average is 36.6667
+// - Letters (50 abc 60 -1):             asks for a number again, average is 55
 
 double computeAverage()
 {
@@ -228,6 +228,8 @@ double computeAverage()
     {
         cin >> marks;
 
+        // Bug 5: Typing letters made cin fail and the loop never stopped.
+        // Fix: Clear the error, remove the bad input and ask again.
         if (cin.fail())
         {
             cin.clear();
@@ -238,17 +240,26 @@ double computeAverage()
         }
         else if (marks >= 0)
         {
+            // Bug 1: Negative marks and -1 were added to the total.
+            // Fix: Only add marks that are 0 or more.
             total = total + marks;
+
+            // Bug 2: Negative marks and -1 were counted.
+            // Fix: Only count valid marks.
             count++;
         }
 
     } while (marks != -1);
 
+    // Bug 3: Dividing by zero when no valid marks were entered.
+    // Fix: Return 0.0 if count is 0.
     if (count == 0)
     {
         return 0.0;
     }
 
+    // Bug 4: Integer division lost the decimal part.
+    // Fix: Change total to double before dividing.
     return static_cast<double>(total) / count;
 }
 
@@ -290,3 +301,4 @@ void task10()
         showVariables();
     }
 }
+
