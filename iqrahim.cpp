@@ -65,3 +65,21 @@ void task1()
     cout << "Variables and Output" << endl;
     cout << "Sum: " << a + b << endl;
 }
+// Task 2 - Multiplication
+
+// Multiplies two numbers and displays the answer.
+
+// Personalisation: The digits of 6152 add up to 14.
+// The second number is set to 2.
+
+// Error 2: The program adds the numbers instead of multiplying them.
+
+void task2()
+{
+    int a = 14;
+    int b = 2;
+
+    cout << "First number: " << a << endl;
+    cout << "Second number: " << b << endl;
+    cout << "Result: " << a + b << endl;
+}
