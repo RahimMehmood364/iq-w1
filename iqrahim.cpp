@@ -163,4 +163,15 @@ void task6()
     // Index 2 refers to the third element.
     cout << "Third value = " << numbers[2] << endl;
 }
+// Task 7 - Function Parameters
+
+// Receives a name and marks, then displays both.
+
+// Personalisation: Uses Rahim's name and the last two digits of 6152 (52).
+
+void task7(string name, int marks)
+{
+    cout << "Hello, welcome " << name << endl;
+    cout << "Your marks are " << marks << endl;
+}
 
