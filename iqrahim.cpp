@@ -105,13 +105,13 @@ void task3()
 
 // Personalisation: Uses the full number 6152.
 
-// Error 3: Uses != instead of == in the condition.
+// Fix: Changed != to == to check for an even number.
 
 void task4()
 {
     int number = 6152;
 
-    if (number % 2 != 0)
+    if (number % 2 == 0)
     {
         cout << number << " is even" << endl;
     }
@@ -120,3 +120,4 @@ void task4()
         cout << number << " is odd" << endl;
     }
 }
+
