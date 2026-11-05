@@ -48,3 +48,20 @@ int main()
 
     return 0;
 }
+// Task 1 - Integer Variables and Display
+
+// Stores two integer values and displays their total.
+
+// Personalisation: Takes the second digit (1) and final digit (2)
+// from the number 6152.
+
+// Error 1: The program uses fixed values instead of asking the user.
+
+void task1()
+{
+    int a = 1;
+    int b = 2;
+
+    cout << "Variables and Output" << endl;
+    cout << "Sum: " << a + b << endl;
+}
