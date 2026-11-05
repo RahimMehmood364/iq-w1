@@ -191,3 +191,57 @@ void task8()
     cout << "My personalisation number is 6152" << endl;
     cout << "Total function calls: " << count << endl;
 }
+// Task 9 - Calculate Average
+
+// Reads marks until -1 is entered and calculates their average.
+
+// Negative marks are ignored, and invalid text is handled.
+
+// Fix 1: Only valid marks are added to the total.
+// Fix 2: Only valid marks are counted.
+// Fix 3: Returns 0.0 when no valid marks are entered.
+// Fix 4: Uses double division for an accurate average.
+// Fix 5: Handles letters or other invalid input.
+
+double computeAverage()
+{
+    int total = 0;
+    int marks = 0;
+    int count = 0;
+
+    do
+    {
+        cin >> marks;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+
+            cout << "Please enter a number:" << endl;
+            marks = 0;
+        }
+        else if (marks >= 0)
+        {
+            total = total + marks;
+            count++;
+        }
+
+    } while (marks != -1);
+
+    if (count == 0)
+    {
+        return 0.0;
+    }
+
+    return static_cast<double>(total) / count;
+}
+
+void task9()
+{
+    cout << "Enter marks (enter -1 to stop):" << endl;
+
+    double average = computeAverage();
+
+    cout << "The average of the marks is: " << average << endl;
+}
