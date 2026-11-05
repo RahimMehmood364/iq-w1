@@ -99,3 +99,24 @@ void task3()
         cout << N << " x " << i << " = " << N * i << endl;
     }
 }
+// Task 4 - Even or Odd
+
+// Checks whether a number is even or odd.
+
+// Personalisation: Uses the full number 6152.
+
+// Error 3: Uses != instead of == in the condition.
+
+void task4()
+{
+    int number = 6152;
+
+    if (number % 2 != 0)
+    {
+        cout << number << " is even" << endl;
+    }
+    else
+    {
+        cout << number << " is odd" << endl;
+    }
+}
