@@ -72,7 +72,7 @@ void task1()
 // Personalisation: The digits of 6152 add up to 14.
 // The second number is set to 2.
 
-// Error 2: The program adds the numbers instead of multiplying them.
+// Fix: Changed addition to multiplication.
 
 void task2()
 {
@@ -81,5 +81,5 @@ void task2()
 
     cout << "First number: " << a << endl;
     cout << "Second number: " << b << endl;
-    cout << "Result: " << a + b << endl;
+    cout << "Result: " << a * b << endl;
 }
