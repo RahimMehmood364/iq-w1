@@ -1,4 +1,4 @@
-// 6152_C1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//  This file contains the 'main' function. Program execution begins and ends there.
 
 // personalisation number: 6152
 /*
