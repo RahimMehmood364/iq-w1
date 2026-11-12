@@ -1,20 +1,18 @@
-//  This file contains the 'main' function. Program execution begins and ends there.
+//  This file contains the main function and Program starts and runs from the main function
 
 // personalisation number: 6152
 /*
- W1 ERRORS AND FIXES
+E1 task 2 - used + instead of *
+   fix: Changed + to * to get 28.
 
- E1 Task 2 - Used + instead of *.
-    Fix: Changed + to * to get the correct answer (28).
+E2 Task 4 - used the Wrong EVEN or ODD condition.
+   Fix: Changed != to ==.
 
- E2 Task 4 - Used the wrong condition to check even or odd.
-    Fix: Changed != to == so 6152 is shown as even.
+E3 Task 7 - Used the wrong student name
+   Fix: Changed it to "Student 6152".
 
- E3 Task 7 - The student name was incorrect.
-    Fix: Changed the name to "Student 6152".
-
- E4 Task 8 - The counter started from 0 every time.
-    Fix: Added static so the counter remembers its previous value.
+E4 task 8 Counter kept resetting
+   Fix: Added static and thats how problem was fixed
 */
 
 #include <iostream>
@@ -63,15 +61,8 @@ int main()
 
     return 0;
 }
-// Task 1 - Integer Variables and Display
-
-// Stores two integer values and displays their total.
-
-// Personalisation: Takes the second digit (1) and final digit (2)
-// from the number 6152.
-
-// The two values come from the personalisation number, so no user input is needed.
-
+// Task 1 Stores two numbers and displays their Total and personalization uses 1 and 2 from 6152
+// No user input needed
 void task1()
 {
     int a = 1;
@@ -80,12 +71,8 @@ void task1()
     cout << "Variables and Output" << endl;
     cout << "Sum: " << a + b << endl;
 }
-// Task 2 - Multiplication
-
-// Multiplies two numbers and displays the answer.
-
-// Personalisation: The digits of 6152 add up to 14.
-// The second number is set to 2.
+// Task 2 multiplies two numbers and displays the answer
+// personalisation Uses 14 and 2 from 6152.
 
 // Fix: Changed addition to multiplication.
 
@@ -98,12 +85,8 @@ void task2()
     cout << "Second number: " << b << endl;
     cout << "Result: " << a * b << endl;
 }
-// Task 3 - Multiplication Table
-
-// Uses a loop to display the table of a number.
-
-// Personalisation: N is worked out using 6152 % 10 + 1.
-// The calculated value of N is 3.
+// Task 3 displays a multiplication table
+// Personalisation: N is 3
 
 void task3()
 {
@@ -114,12 +97,7 @@ void task3()
         cout << N << " x " << i << " = " << N * i << endl;
     }
 }
-// Task 4 - Even or Odd
-
-// Checks whether a number is even or odd.
-
-// Personalisation: Uses the full number 6152.
-
+// Task 4 checks if a number is even or odd and personalization uses 6152
 // Fix: Changed != to == to check for an even number.
 
 void task4()
@@ -135,12 +113,8 @@ void task4()
         cout << number << " is odd" << endl;
     }
 }
-// Task 5 - Month Selection
-
-// Uses a switch statement to display a month name.
-
-// Personalisation: The month number is calculated from 6152.
-// The result is 9, which represents September.
+// Task 5 displays a month name using switch
+// Personalisation: Uses 9 for September
 
 void task5()
 {
@@ -165,37 +139,34 @@ void task5()
             cout << "Invalid month" << endl;
     }
 }
-// Task 6 - Working with Arrays
+// Task 6  Working with arrays
 
-// Stores five values and displays the third one.
+//  it Stores five values and displays the third one
 
-// Personalisation: The third array value is the last digit of 6152 (2).
+// Personalisation The third array value is the last digit of 6152 which is 2
 
 void task6()
 {
     int numbers[5] = {10, 20, 2, 40, 50};
 
-    // Index 2 refers to the third element.
+    
     cout << "Third value = " << numbers[2] << endl;
 }
 // Task 7 - Function Parameters
 
-// Receives a name and marks, then displays both.
+// receives a name and marks and then displays both
 
-// Personalisation: Uses the student label and the last two digits of 6152 (52).
+// Personalisation: uses the student label and the last two digits of 6152 which are 52
 
 void task7(string name, int marks)
 {
     cout << "Hello, welcome " << name << endl;
     cout << "Your marks are " << marks << endl;
 }
-// Task 8 - Static Counter
+// Task 8 Static Counter
 
-// Shows the personalisation number and counts function calls.
-
-// Personalisation: Displays 6152 on each call.
-
-// Fix: Added static so the counter keeps its value.
+// it displays 6152 and counts function calls
+// Fixation was done by adding static to remember the count
 
 void task8()
 {
@@ -206,17 +177,10 @@ void task8()
     cout << "My personalisation number is 6152" << endl;
     cout << "Total function calls: " << count << endl;
 }
-// Task 9 - Calculate Average
-
-// Reads marks until -1 is entered and calculates their average.
-
-// Negative marks are ignored, and invalid text is handled.
-
-// Testing:
-// - No valid marks (-1 only):           average is 0
-// - All valid marks (50 60 70 -1):      average is 60
-// - Mixed (50 0 -5 60 -1):              -5 ignored, average is 36.6667
-// - Letters (50 abc 60 -1):             asks for a number again, average is 55
+// Task 9 calculates the average of marks.
+//  it stops when -1 u enter and ignores negative marks
+// Invalid text is handled and asked againn
+// tests cover empty Input valid marks negative marks and letters
 
 double computeAverage()
 {
@@ -240,26 +204,26 @@ double computeAverage()
         }
         else if (marks >= 0)
         {
-            // Bug 1: Negative marks and -1 were added to the total.
-            // Fix: Only add marks that are 0 or more.
+            // Bug 1 was Negative marks and -1 were added to the total.
+            // Fix: Only add marks that are 0 or more
             total = total + marks;
 
-            // Bug 2: Negative marks and -1 were counted.
-            // Fix: Only count valid marks.
+            // Bug 2  negative marks and -1 were counted.
+            // Fix: only count valid marks.
             count++;
         }
 
     } while (marks != -1);
 
-    // Bug 3: Dividing by zero when no valid marks were entered.
-    // Fix: Return 0.0 if count is 0.
+    // Bug 3: division by zero
+// Fix: Return 0.0 if no marks are entered
     if (count == 0)
     {
         return 0.0;
     }
 
-    // Bug 4: Integer division lost the decimal part.
-    // Fix: Change total to double before dividing.
+  // Bug 4: lost decimal part
+// Fix: used double for division
     return static_cast<double>(total) / count;
 }
 
@@ -271,11 +235,8 @@ void task9()
 
     cout << "The average of the marks is: " << average << endl;
 }
-// Task 10 - Variable Scope
-
-// Shows how global, static and local variables behave.
-
-// Personalisation: All three variables start from 6152.
+// Task 10 it us  shows global static and Local Variables.
+// Personalisation all start at 6152
 
 void showVariables()
 {
@@ -295,7 +256,7 @@ void showVariables()
 
 void task10()
 {
-    // Calls the function three times.
+    
     for (int i = 0; i < 3; i++)
     {
         showVariables();
